@@ -27,11 +27,11 @@ def askUserChoice():
     while userChoise not in CorrectInput:
         print('Choose a number between 1 and 4.')
         userChoice = int(input())
-        if userChoice not in CorrectInput:
-           print('The number you have choosen is not a number between 1 and 4.')
+        if userChoice not in valid:
+           print('Please choose numbers between 1 and 4.')    
            continue
-        else:
-           return int(userChoice)  
+    else:
+        return int(userChoice)  
     # TODO: write code in this functiont that:
     # 1. Asks the user to enter their input (between 1 and 4)
     # 2. Checks that the user's input is valid. If it's not valid (if it's not between 1 and 4), then ask the user to re-enter their input.
@@ -55,5 +55,5 @@ def subtractSticks( number ):
     
 def determineComputerChoice():
     computerChoice = random.randint(1,4)
-    return computerChoice
+    return(computerChoice)
     # TODO: write code inside this function that returns an integer between 1 and 4, random chosen by the computer
